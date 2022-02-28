@@ -1,0 +1,61 @@
+<!--
+ * @Descripttion: Dots Menu
+ * @version: 0.0.0
+ * @Author: Minyoung
+ * @Date: 2022-02-12 17:21:24
+ * @LastEditors: Minyoung
+ * @LastEditTime: 2022-02-12 19:18:12
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dots Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+  <div class="box">
+    <span style="--i: 0; --x: 0; --y: 0">
+      <i class="ri-chat-smile-2-line"></i>
+    </span>
+    <span style="--i: 1; --x: 0; --y: 1">
+      <i class="ri-quill-pen-line"></i>
+    </span>
+    <span style="--i: 2; --x: 1; --y: 0">
+      <i class="ri-contrast-2-line"></i>
+    </span>
+    <span style="--i: 3; --x: -1; --y: 0">
+      <i class="ri-tools-line"></i>
+    </span>
+    <span style="--i: 4; --x: 0; --y: -1">
+      <i class="ri-code-s-slash-line"></i>
+    </span>
+    <span style="--i: 5; --x: -1; --y: -1">
+      <i class="ri-phone-line"></i>
+    </span>
+    <span style="--i: 6; --x: 1; --y: 1">
+      <i class="ri-rss-line"></i>
+    </span>
+    <span style="--i: 7; --x: 1; --y: -1">
+      <i class="ri-apple-line"></i>
+    </span>
+    <span style="--i: 8; --x: -1; --y: 1">
+      <i class="ri-github-line"></i>
+    </span>
+  </div>
+  <script>
+    const box = document.querySelector('.box')
+    box.addEventListener('click', function(e) {
+      e.stopPropagation()
+      box.classList.toggle('active')
+    })
+
+    document.addEventListener('click', () => {
+      box.classList.toggle('active')
+    })
+  </script>
+</body>
+</html>
